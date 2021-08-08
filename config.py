@@ -15,15 +15,3 @@ quote_api_url = api + quote_endpoint
 buy_api_url = api + buy_endpoint
 sell_api_url = api + sell_endpoint
 history_api_url = api + history_endpoint
-
-headers = {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'x-access-token': 'placeholder'
-}
-
-invalid_token_headers = {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'x-access-token': 'placeholder'
-}

@@ -16,12 +16,6 @@ buy_api_url = api + buy_endpoint
 sell_api_url = api + sell_endpoint
 history_api_url = api + history_endpoint
 
-credentials = {'username': 'Pedro', 'password': 'Pedro'}
-
-invalid_password_credentials = {'username': 'Pedro', 'password': 'Pedroe'}
-
-invalid_username_credentials = {'username': 'invalid', 'password': 'Pedro'}
-
 headers = {
         'Content-Type': 'application/json',
         'Accept': 'application/json',

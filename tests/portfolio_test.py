@@ -8,7 +8,9 @@ from assertpy.assertpy import assert_that
 # from utils.print_helpers import pretty_print
 from config import *
 from utils.print_helpers import pretty_print
+from utils.file_reader import *
 from utils.setup_helpers import login_succesful
+import pytest
 
 def test_user_can_obtain_portfolio():
     token = login_succesful()

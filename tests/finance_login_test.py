@@ -1,13 +1,9 @@
 import requests
 from assertpy.assertpy import assert_that
 import pytest
-
-
-from config import *
-from utils.print_helpers import pretty_print
-from utils.file_reader import *
-
+from utils.file_reader import read_file
 from clients.login.login_client import LoginClient
+
 login_client = LoginClient()
 
 def test_user_can_login(get_credentials):

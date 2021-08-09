@@ -12,11 +12,10 @@ class PortfolioClient(BaseClient):
 
     
     def get_portfolio_auth(self, login_res):
-        headers = read_file('headers.json')
-        headers['x-access-token'] = login_res.as_dict['token']
-        return self.request.get(url=self.url, headers=headers)
+        self.headers['x-access-token'] = login_res.as_dict['token']
+        return self.request.get(url=self.url, headers=self.headers)
 
     
     def get_portfolio_no_auth(self):
-        headers = read_file('headers.json')
-        return self.request.get(url=self.url, headers=headers)
+        self.headers = read_file('headers.json')
+        return self.request.get(url=self.url, headers=self.headers)

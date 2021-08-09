@@ -1,8 +1,6 @@
 from json import dumps
-from uuid import uuid4
-
 from clients.base_client import BaseClient
-from config import *
+from config import login_api_url
 from utils.request import APIRequest
 from utils.file_reader import read_file
 
@@ -18,8 +16,6 @@ class LoginClient(BaseClient):
             payload = read_file('credentials.json')
         else:
             payload = body
-
-        print("PAY LOADDDDDD" + str(payload))
         
         response = self.request.post(self.url, dumps(payload), self.headers)
         return response
